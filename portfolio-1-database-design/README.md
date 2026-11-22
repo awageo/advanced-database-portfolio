@@ -80,5 +80,7 @@ CREATE TABLE IF NOT EXISTS lab_records (
 # InnoDB for MySQL has the function to commit, rollback, and crash-recovery capabilities to protect user data.
 # The nature of the database comprises patients, doctors, appointments, prescriptions, and laboratory records
 
+[P1_DDM_Schema.sql](https://github.com/user-attachments/files/35244680/P1_DDM_Schema.sql)
+
 <img width="866" height="587" alt="Awa_Enyinnaya_EER_Diagram" src="https://github.com/user-attachments/assets/96a9cfd4-be76-4db7-9a07-240b2fd21f0f" />
 
