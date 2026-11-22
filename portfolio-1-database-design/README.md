@@ -1,4 +1,21 @@
 # Portfolio 1: Database Design
+
+Description of Chosen Case Study
+Name of the System: SESHC Healthcare Management System (seshc_db)
+
+Problem and Overview:
+Medical facilities process a lot of information each day. Using paper documents or spreadsheets can lead to duplicate bookings, lost laboratory results, prescription errors, etc. SESHC is a simulated medium-sized private clinic in Port Harcourt, Nigeria, offering outpatient consultations, laboratory services, pharmacy services, and follow-up care.
+
+Scope of the System:
+The relational schema was created to automatize main clinical processes in the medical facility. The main five areas of operations in the system are:
+
+1.	Patient Management: Contains data about patient demographics, blood types, contact information, as well as uses the soft-delete principle (“is_active”) to preserve all medical history without erasing records completely.
+2.	Physicians: Contains information about attending physicians, specialization in medicine, unique physician number, and contact information.
+3.	Booking: Bookings between patients and physicians by particular date and time, as well as keeping track of visit status and clinical notes.
+4.	Medicine: Contains data about medicines prescribed, dosage, frequency, and duration of taking the medicine during consultation with the physician.
+5.	Laboratory Results: Contains laboratory test order and updates the results asynchronously when tests change their status from "Pending" to "Completed".
+
+
 # First, create the database schema
 CREATE DATABASE IF NOT EXISTS seshc_db;
 USE seshc_db;
@@ -79,6 +96,8 @@ CREATE TABLE IF NOT EXISTS lab_records (
 # InnoDB is a transaction-safe (ACID-compliant) storage engine 
 # InnoDB for MySQL has the function to commit, rollback, and crash-recovery capabilities to protect user data.
 # The nature of the database comprises patients, doctors, appointments, prescriptions, and laboratory records
+
+<img width="866" height="587" alt="Awa_Enyinnaya_301873019" src="https://github.com/user-attachments/assets/3062e1a5-c16d-4df5-8d0e-29754673b3b2" />
 
 [P1_DDM_Schema.sql](https://github.com/user-attachments/files/35244680/P1_DDM_Schema.sql)
 
