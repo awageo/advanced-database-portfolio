@@ -1,4 +1,14 @@
 # Portfolio2: Query Optimisation
+Indexing & Optimization Evidence
+* Elimination of using filesort:
+As the idx_appt_status_date creates an index in order of (status, appointment_date), the WHERE clause on status = 'Completed' with ORDER BY appointment_date DESC will result in reading the leaves of the B+Tree in reverse order. Thus, using filesort is eliminated.
+* Covering Index Usage (Using index):
+The idx_presc_appt_med and idx_lab_appt_status contain all the columns used in the SELECT clause (medication_name, duration_days, test_type, status). The InnoDB engine performs the LEFT JOIN operation using the secondary index pages only, halving the disk I/O by skipping the search for the primary key clustered index lookup.
+* Search Argumentable Predicate:
+Changing the predicate function YEAR(appointment_date) = 2026 to appointment_date >= '2026-01-01' AND appointment_date < '2027-01-01' preserves predicate SARGable (Search ARGument-able), thus allowing the optimizer to use range scan instead of full table scan (ALL).
+* Duplicate Index Avoidance:
+MySQL utilizes these as single-column foreign key lookups, avoiding duplicate single-column indexes that slow down INSERT and UPDATE operations.
+
 USE seshc_db;
 
 # 1. CREATE INDEXES (the create index syntax is hashed since the table has already exits therefore havinng a duplicate key
