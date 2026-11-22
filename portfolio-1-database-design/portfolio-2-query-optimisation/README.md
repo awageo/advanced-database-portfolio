@@ -35,6 +35,8 @@ ORDER BY a.appointment_date DESC;
 ANALYZE TABLE patients, doctors, appointments, prescriptions, lab_records;
 SHOW INDEX FROM appointments;
 
-#[Table.txt](https://github.com/user-attachments/files/35177235/Table.txt)
-[Status.txt](https://github.com/user-attachments/files/35177233/Status.txt)
-[result.txt](https://github.com/user-attachments/files/35177231/result.txt)
+[Optimisation_query.sql](https://github.com/user-attachments/files/35244647/Optimisation_query.sql)
+<img width="1917" height="1077" alt="Opt_Result_3" src="https://github.com/user-attachments/assets/99bafcb7-ab77-4054-bdbf-41a63bbeaeb4" />
+<img width="1912" height="1077" alt="Opt_Result_2" src="https://github.com/user-attachments/assets/de6de819-caf2-4bdf-b6ea-9fadcbb43e16" />
+<img width="1912" height="1077" alt="Opt_Result_1" src="https://github.com/user-attachments/assets/4345bcf7-bd7b-4445-b4dc-5a30ccba8244" />
+
